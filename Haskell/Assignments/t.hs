@@ -1,0 +1,1 @@
+cut i j lis = (i) `drop` ((j+1) `take` lis )

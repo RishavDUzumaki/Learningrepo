@@ -1,0 +1,143 @@
+if ( condition )
+      statement ;
+
+(a) if ( condition )
+    do this ;
+
+(b) if ( condition )
+   {
+    do this ;
+    and this ;
+    }
+
+(c) if ( condition )
+    do this ;
+    else
+    do this ;
+
+(d) if ( condition )
+    {
+       do this ;
+       and this ;
+    }
+    else
+    {
+       do this ;
+      and this ;
+    }
+(e) if ( condition )
+    do this ;
+    else
+    {
+      if ( condition )
+      do this ;
+    else
+    {
+      do this ;
+      and this ;
+    }
+}
+(f)
+if ( condition )
+{
+  if ( condition )
+    do this ;
+   else
+   {
+     do this ;
+     and this ;
+   }
+}
+else
+ do this ;
+
+initialise loop counter ;
+--while
+while ( test loop counter using a condition )
+{
+   do this ;
+   and this ;
+   increment loop counter ;
+}
+for (initialise counter  ; condition counter ; increment counter)
+{
+    do this;
+    and this;
+}
+we can also do multiple initiasition  in for and also nest them 
+do
+{
+  this ;
+  and this ;
+  and this ;
+  and this ;
+} while ( this condition is true ) ;
+
+in some programming situations we want to take the control to the
+beginning of the loop, bypassing the statements inside the loop,
+which have not yet been executed. The keyword continue allows
+us to do this. When continue is encountered inside any loop,
+control automatically passes to the beginning of the loop.
+A continue is usually associated with an if. As an example, let's
+consider the following program.
+main( )
+{
+int i, j ;
+for ( i = 1 ; i <= 2 ; i++ )
+{
+   for ( j = 1 ; j <= 2 ; j++ )
+   {
+     if ( i == j )
+          continue ;
+     printf ( "\n%d %d\n", i, j ) ;
+    }
+}
+}
+Note that when the value of i equals that of j, the continue
+statement takes the control to the for loop (inner) bypassing rest of
+the statements pending execution in the for loop (inner).
+break an contnues effects the nearest  control block
+main( )
+{
+int i = 2 ;
+switch ( i )
+{
+   case 1 :
+   printf ( "I am in case 1 \n" ) ;
+   break ;
+   case 2 :
+   printf ( "I am in case 2 \n" ) ;
+   break ;
+   case 3 :
+   printf ( "I am in case 3 \n" ) ;
+   break ;
+   default :
+   printf ( "I am in default \n" ) ;
+}
+Avoid goto keyword! They make a C programmer’s life miserable.
+There is seldom a legitimate reason for using goto, and its use is
+146 Let Us C
+one of the reasons that programs become unreliable, unreadable,
+and hard to debug. And yet many programmers find goto
+seductive.
+In a difficult programming situation it seems so easy to use a goto
+to take the control where you want. However, almost always, there
+is a more elegant way of writing the same program using if, for,
+while and switch. These constructs are far more logical and easy
+to understand.
+main( )
+{
+int goals ;
+printf ( "Enter the number of goals scored against India" ) ;
+scanf ( "%d", &goals ) ;
+if ( goals <= 5 )
+goto sos ;
+else
+{
+printf ( "About time soccer players learnt C\n" ) ;
+printf ( "and said goodbye! adieu! to soccer" ) ;
+exit( ) ; /* terminates program execution */
+}
+sos :
+printf ( "To err is human!" ) ;
+&x = adress of variable x and *x is the value stored at adress x
